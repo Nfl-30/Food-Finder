@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+main {
+    margin: 24px auto;
+    overflow: auto;
+}
+
+.content{
+    float: right;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    /*border: 2pt solid black;*/
+    padding-right: 20px;
+}
+
+meal-item {
+    display: block;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 4px;
+}
+
+.meal-picture {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.meal-info {
+    padding: 24px;
+}
+
+.meal-info > h2 {
+    font-weight: lighter;
+    color: black;
+    text-align: center;
+}
+
+.meal-info > h3 {
+ font-weight: lighter;
+}
+
+.meal-info > p {
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10; /* number of lines to show */
+}
+
+
+aside{
+    width: 30%;
+    margin: 0 auto;
+    float: left;
+    /*border: 2px solid black;*/
+}
+
+.card-search{
+    padding: 20px;
+    margin: 0 10px;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.search-button{
+    margin-top: 5px;
+}
+
+
+/*Pengaturan layar*/
+@media screen and (max-width: 1000px){
+    .content, aside{
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    
+}
+
+@media screen and (max-width: 500px) {
+    nav > h2{
+     font-size: 16px;   
+    }
+    .row{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    nav > h2{
+     font-size: 12px;   
+    }
+    .row{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+    }
+}
