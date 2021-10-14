@@ -1,15 +1,10 @@
 class NavBar extends HTMLElement {
+  connectedCallback () {
+    this.render();
+  }
 
-    constructor() {
-        super();
-    }
-
-    connectedCallback(){
-        this.render();
-    }
-
-    render() {
-        this.innerHTML = `
+  render () {
+    this.innerHTML = `
         <style>
             * {
                margin: 0;
@@ -25,7 +20,7 @@ class NavBar extends HTMLElement {
             <h2>Meal Menu</h2>
         </nav>
        `;
-    }
+  }
 }
 
 customElements.define("nav-bar", NavBar);

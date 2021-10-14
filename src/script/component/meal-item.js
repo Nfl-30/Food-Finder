@@ -1,16 +1,15 @@
 class MealItem extends HTMLElement {
+  set meal (meal) {
+    this._meal = meal;
+    this.render();
+  }
 
-    constructor() {
-        super();
-    }
+  get meal () {
+    return this._meal;
+  }
 
-    set meal(meal) {
-        this._meal = meal;
-        this.render();
-    }
-
-    render() {
-        this.innerHTML = `
+  render () {
+    this.innerHTML = `
            <div class="card">
            <img class="meal-picture" src="${this._meal.strMealThumb}" alt="Meal Picturez">
            <div class="meal-info">
@@ -20,7 +19,7 @@ class MealItem extends HTMLElement {
                <p>Video Resep:${this._meal.strYoutube}</p>
            </div>
            </div>`;
-    }
+  }
 }
 
 customElements.define("meal-item", MealItem);

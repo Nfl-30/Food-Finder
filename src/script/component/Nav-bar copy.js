@@ -1,16 +1,15 @@
 class NavBar extends HTMLElement {
+  constructor () {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: "open" });
+  }
 
-    constructor() {
-        super();
-        this.shadowDOM = this.attachShadow({mode: "open"});
-    }
+  connectedCallback () {
+    this.render();
+  }
 
-    connectedCallback(){
-        this.render();
-    }
-
-    render() {
-        this.shadowDOM.innerHTML = `
+  render () {
+    this.shadowDOM.innerHTML = `
        <style>
            * {
                margin: 0;
@@ -29,7 +28,7 @@ class NavBar extends HTMLElement {
            }
        </style>
        <h2>Club Finder</h2>`;
-    }
+  }
 }
 
 customElements.define("nav-bar", NavBar);

@@ -65,8 +65,7 @@ meal-item {
     -webkit-line-clamp: 10; /* number of lines to show */
 }
 
-
-aside{
+.search{
     width: 30%;
     margin: 0 auto;
     float: left;
@@ -81,20 +80,18 @@ aside{
     border-radius: 20px;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
 .search-button{
     margin-top: 5px;
 }
 
-
 /*Pengaturan layar*/
 @media screen and (max-width: 1000px){
-    .content, aside{
+    .content, .search{
         width: 100%;
         padding: 0;
         margin: 0 auto;
     }
-
-    
 }
 
 @media screen and (max-width: 500px) {
